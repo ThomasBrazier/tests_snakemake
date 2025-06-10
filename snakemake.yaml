@@ -1,0 +1,9 @@
+name: snakemake
+channels:
+ - bioconda
+ - conda-forge
+dependencies:
+ - snakemake>8.9
+ - conda
+ - mamba
+ - pandas
