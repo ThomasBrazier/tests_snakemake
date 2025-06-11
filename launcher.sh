@@ -14,3 +14,6 @@ conda activate snakemake
 
 snakemake -s workflow/Snakefile --configfile config/config.yaml \
 --use-conda --conda-frontend conda --profile ./profiles/slurm --cores 1 --rerun-incomplete
+
+# snakemake -s workflow/Snakefile --configfile config/config.yaml \
+# --use-conda --conda-frontend conda --cores 1 --rerun-incomplete

@@ -1,17 +1,17 @@
-rule download_sra_rnaseq:
-    """
-    Download the RNA seq raw data (fastq) from the SRA archive
-    """
-    output:
-        "{wdir}/fastq/{sra}_1.fastq.gz",
-        "{wdir}/fastq/{sra}_2.fastq.gz"
-    conda:
-        "../envs/download.yaml"
-    shell:
-        """
-        mkdir --parents {wdir}/fastq
-        fastq-dump {wildcards.sra} -v --split-files --gzip --outdir {wdir}/fastq/
-        """
+# rule download_sra_rnaseq:
+#     """
+#     Download the RNA seq raw data (fastq) from the SRA archive
+#     """
+#     output:
+#         "{wdir}/fastq/{sra}_1.fastq.gz",
+#         "{wdir}/fastq/{sra}_2.fastq.gz"
+#     conda:
+#         "../envs/download.yaml"
+#     shell:
+#         """
+#         mkdir --parents {wdir}/fastq
+#         fastq-dump {wildcards.sra} -v --split-files --gzip --outdir {wdir}/fastq/
+#         """
 
 
 rule download_genome:
